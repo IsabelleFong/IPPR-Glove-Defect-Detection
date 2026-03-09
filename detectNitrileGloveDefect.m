@@ -59,7 +59,7 @@ function [result, defect] = detectNitrileGloveDefect(img, appUI)
 end
 
 
-%% ====================== Read Image Function ======================
+%% ====================== Resize Image Function ======================
 function [img, success] = resizeImage(img)
 
     try
