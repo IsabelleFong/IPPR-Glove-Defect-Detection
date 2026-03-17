@@ -90,9 +90,6 @@ function [gray_img, success] = imagePreprocessing(img)
         background = imopen(gray_img, strel('disk', 50));
         gray_img = imsubtract(gray_img, background);
 
-        background = imopen(gray_img, strel('disk', 50));
-        gray_img = imsubtract(gray_img, background);
-
         % STEP 3: Blur / Reduce Sharpness
         sigma = 10;                          % Standard deviation for Gaussian blur
         gray_img = imgaussfilt(gray_img, sigma);
